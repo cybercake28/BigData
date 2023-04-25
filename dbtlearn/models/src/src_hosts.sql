@@ -1,8 +1,14 @@
-create or replace 
-WITH raw_listings AS (
-    SELECT 
+WITH raw_hosts AS (
+    SELECT
     *
     FROM
-    AIRBNB.RAW.RAW_LISTINGS
-    -- {{ source('airbnb', 'hosts') }}
+    AIRBNB.RAW.RAW_HOSTS
 )
+SELECT 
+    id AS host_id,
+    name AS host_name,
+    is_superhost,
+    created_at,
+    updated_at
+FROM
+    raw_hosts
