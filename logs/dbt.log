@@ -26,3 +26,80 @@ Happy modeling!
 
 [0m11:44:46.222408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe54b12eaa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe54b12ea40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe54b12fe20>]}
 [0m11:44:46.222664 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-25 11:59:13.200526 | 462b4494-ba69-45b1-a29d-f0c6256e5d59 ==============================
+[0m11:59:13.200526 [info ] [MainThread]: Running with dbt=1.4.6
+[0m11:59:13.201760 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/lulu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m11:59:13.201905 [debug] [MainThread]: Tracking: tracking
+[0m11:59:13.202823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc65826380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc65827220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc65827100>]}
+[0m11:59:23.754149 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.10/dist-packages/dbt/include/starter_project
+[0m12:00:10.194108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc6499b760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc64998dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc6499a560>]}
+[0m12:00:10.194520 [debug] [MainThread]: Flushing usage events
+[0m12:00:10.615240 [error] [MainThread]: Encountered an error:
+
+[0m12:00:10.616449 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/lib/python3.10/dist-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.10/dist-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.10/dist-packages/dbt/task/init.py", line 305, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "/usr/local/lib/python3.10/dist-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/usr/local/lib/python3.10/dist-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/usr/local/lib/python3.10/dist-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/usr/local/lib/python3.10/dist-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/usr/local/lib/python3.10/dist-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-04-25 12:03:44.970281 | ecffb6c5-6710-49fc-b155-71a6ea336a06 ==============================
+[0m12:03:44.970281 [info ] [MainThread]: Running with dbt=1.4.6
+[0m12:03:44.971582 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/lulu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:03:44.971730 [debug] [MainThread]: Tracking: tracking
+[0m12:03:44.972636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f559e52f040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f559e52f8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f559e52f0d0>]}
+[0m12:03:48.637317 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.10/dist-packages/dbt/include/starter_project
+[0m12:05:23.447836 [info ] [MainThread]: Profile dbtlearn written to /home/lulu/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:05:23.448496 [info ] [MainThread]: 
+Your new dbt project "dbtlearn" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:05:23.448976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f559e52f0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f559e52faf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f559e52f760>]}
+[0m12:05:23.449349 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-25 12:05:40.397735 | 207130e6-dfef-4499-95e0-500613ea4467 ==============================
+[0m12:05:40.397735 [info ] [MainThread]: Running with dbt=1.4.6
+[0m12:05:40.399004 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/lulu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m12:05:40.399146 [debug] [MainThread]: Tracking: tracking
+[0m12:05:40.400116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f97f8e230a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f97f8e23a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f97f8e23190>]}
+[0m12:05:40.537852 [debug] [MainThread]: Executing "git --help"
+[0m12:05:40.538925 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:05:40.539106 [debug] [MainThread]: STDERR: "b''"
+[0m12:05:40.541079 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m12:05:40.541571 [debug] [MainThread]: Using snowflake connection "debug"
+[0m12:05:40.541746 [debug] [MainThread]: On debug: select 1 as id
+[0m12:05:40.541900 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:06:47.771802 [debug] [MainThread]: Flushing usage events
+[0m12:06:48.193627 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:06:48.194594 [info ] [MainThread]: ctrl-c
